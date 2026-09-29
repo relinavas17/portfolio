@@ -14,7 +14,7 @@ export function Projects() {
           </h2>
         </div>
 
-        <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
           {projects.map((p, i) => (
             <li key={p.slug}>
               <Link
@@ -33,7 +33,7 @@ export function Projects() {
                 </div>
 
                 <div className="flex flex-1 flex-col gap-3">
-                  <h3 className="font-serif text-[34px] leading-[1.05] transition-colors group-hover:text-burgundy">
+                  <h3 className="font-serif text-[32px] leading-[1.05] transition-colors group-hover:text-burgundy">
                     {p.name}
                   </h3>
                   <p className="text-[16px] leading-relaxed text-ink-soft">{p.oneLiner}</p>

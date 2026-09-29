@@ -51,7 +51,7 @@ export const projects: Project[] = [
     slug: "mira",
     name: "Mira",
     oneLiner: "A voice agent that files auto insurance claims over the phone.",
-    highlight: "100% intent accuracy across 10 calls",
+    highlight: "100% intent accuracy",
     title: "Mira, a voice agent that files auto insurance claims",
     meta: "Independent build · 2026",
     tags: ["AI Systems", "Engineering"],
@@ -107,7 +107,7 @@ export const projects: Project[] = [
     slug: "agent-observability",
     name: "Agent failure analysis",
     oneLiner: "Sorts failed calls into knowledge, instruction, or execution gaps.",
-    highlight: "LLM-as-judge on idempotent ELT",
+    highlight: "LLM-as-judge on ELT",
     title: "Finding out why AI agents fail on real calls",
     meta: "Independent build · 2026",
     tags: ["Data", "AI Systems"],
@@ -128,6 +128,33 @@ export const projects: Project[] = [
     stack: ["Python", "LLM-as-judge", "ELT", "SQL"],
     github: "https://github.com/relinavas17/agent-observability",
   },
+  {
+    slug: "usda-dashboards",
+    name: "USDA market dashboards",
+    oneLiner: "15+ Power BI dashboards for a USDA-funded national web portal.",
+    highlight: "50+ external stakeholders",
+    title: "Turning USDA market data into dashboards 50+ stakeholders rely on",
+    meta: "Dynamic Sustainability Lab, Syracuse University · 2024 to 2025",
+    tags: ["Data", "AI Systems"],
+    summary:
+      "Dashboards and a natural-language query tool for the Advancing Markets for American Producers initiative, published on a GIS-based National Web Portal.",
+    sections: [
+      {
+        label: "Problem",
+        body: "The initiative needed financial, trade, and policy data from USDA reports and other sources turned into something external stakeholders could read and act on without a data team.",
+      },
+      {
+        label: "What I built",
+        body: "Owned design and delivery of 15+ Power BI dashboards: extracting data with SQL, organizing historical datasets, and translating them into clear visualizations and performance indicators. I also designed a RAG chatbot that turns SQL queries into natural language, so stakeholders get real-time answers without engineering support.",
+      },
+      {
+        label: "How I knew it worked",
+        body: "The dashboards serve 50+ external stakeholders through the National Web Portal. Requirements and progress were reviewed with faculty and researchers in regular check-ins. [Add a usage or feedback signal if you have one]",
+      },
+      { label: "What I'd change", body: "[Your answer]" },
+    ],
+    stack: ["Power BI", "SQL", "Excel", "RAG", "GIS"],
+  },
 ];
 
 export type Role = {
@@ -144,31 +171,37 @@ export const experienceHeading = { lead: "From shipping code to", emphasis: "shi
 export const experience: Role[] = [
   {
     company: "Phoenix Tech Solutions",
-    role: "Product Manager, contract",
-    dates: "[Start] to present",
+    role: "Product Manager",
+    dates: "Jun 2026 to present",
     track: "Product",
-    summary: "Leading a 0→1 AI-powered workforce management SaaS for professional services agencies.",
+    summary: "Leading discovery and scoping for a 0→1 AI-powered workforce management SaaS platform.",
     points: [
-      "Defined the ICP (agencies of 20 to 200 people) and buyer (ops director or Head of People)",
-      "Scoped the MVP around one wedge, utilization and allocation visibility, with other features phased",
-      "[Another concrete outcome]",
+      "Defining the core feature set with engineering, design, and client teams to set the MVP roadmap",
+      "Scoped the MVP around one wedge, utilization and allocation visibility for agencies of 20 to 200 people",
     ],
   },
   {
     company: "Louisa AI",
     role: "Product Manager",
-    dates: "Jun 2025 to Feb 2026",
+    dates: "Jun 2025 to Apr 2026",
     track: "Product",
-    summary: "[One line on what you owned]",
-    points: ["[Outcome 1]", "[Outcome 2]"],
+    summary: "Owned 0→1 MVP delivery end to end at a Goldman Sachs spinoff ($5M seed).",
+    points: [
+      "Found onboarding drop-off through user interviews and funnel analysis; shipped a fix that drove a 3x increase in weekly active users",
+      "Built a self-serve analytics workflow with n8n and Amplitude APIs, cutting manual reporting time by 60%",
+      "Resolved a conflicting client request with a configuration-based solution instead of custom logic, keeping the platform standard",
+    ],
   },
   {
     company: "Dynamic Sustainability Lab",
-    role: "Data Analyst / PM",
-    dates: "[Dates]",
+    role: "Data Analyst",
+    dates: "Jun 2024 to May 2025",
     track: "Analytics",
-    summary: "[One line on what you owned]",
-    points: ["[Outcome 1]", "[Outcome 2]"],
+    summary: "Data and dashboards for a USDA-funded initiative at Syracuse University.",
+    points: [
+      "Owned design and delivery of 15+ Power BI dashboards for a GIS-based National Web Portal serving 50+ external stakeholders",
+      "Designed a RAG chatbot that turns SQL queries into natural language for self-serve insights",
+    ],
   },
   {
     company: "SuperWorld",
@@ -180,11 +213,14 @@ export const experience: Role[] = [
   },
   {
     company: "SpurTree Technologies",
-    role: "Frontend Software Engineer",
-    dates: "[Dates]",
+    role: "Software Engineer",
+    dates: "Aug 2021 to Jul 2023",
     track: "Engineering",
-    summary: "Built and shipped cross-platform mobile apps.",
-    points: ["Shipped apps used by 150K+ users", "[Another concrete outcome]"],
+    summary: "Built and launched cross-platform mobile applications in Bangalore.",
+    points: [
+      "Scaled engagement to 150K+ users, aligning technical requirements with business goals",
+      "Resolved 500+ production issues, cutting repeat incidents by 40%",
+    ],
   },
 ];
 
