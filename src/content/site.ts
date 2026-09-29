@@ -204,14 +204,6 @@ export const experience: Role[] = [
     ],
   },
   {
-    company: "SuperWorld",
-    role: "[Role]",
-    dates: "[Dates]",
-    track: "Product",
-    summary: "[One line on what you owned]",
-    points: ["[Outcome 1]", "[Outcome 2]"],
-  },
-  {
     company: "SpurTree Technologies",
     role: "Software Engineer",
     dates: "Aug 2021 to Jul 2023",
@@ -232,7 +224,6 @@ export const about = {
     "[A line about you outside work]",
   ],
   facts: [
-    { label: "Based in", value: "San Diego, open to relocation" },
     { label: "Education", value: "M.S. Engineering Management · [School]" },
     { label: "Looking for", value: "Product and technical program roles" },
     { label: "Toolkit", value: "React, SQL, NLP/NER, API integration, Jira, Figma, Power BI" },
