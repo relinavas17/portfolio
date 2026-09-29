@@ -106,7 +106,7 @@ export const projects: Project[] = [
       { label: "How I knew it worked", body: "[Result, e.g. judge agreement with manual labels]" },
       { label: "What I'd change", body: "[Your answer]" },
     ],
-    github: "https://github.com/relinavas17/llm-evaluator",
+    github: "https://github.com/relinavas17/agent-observability",
   },
 ];
 
