@@ -21,14 +21,16 @@ Still to fill in:
 - `public/resume.pdf`
 - Experience dates, SuperWorld role, one-line outcomes, school name
 - "What I'd change" for each project, observability result
-- Mira repo URL, if it has its own
+- Mira's Retell AI demo link (`demo` on the Mira project)
+- Experience outcomes per role, and the "outside work" line in About
 
 ## Structure
 
 ```
 src/
   app/            layout, global styles, fonts
-  components/     Nav, Hero, Work (filters + accordion), Experience, Approach (tabs), Contact
+  app/projects/[slug]/  one detail page per project
+  components/     Nav, Hero (typed headline), Projects (cards), Experience (timeline + detail panel), About, Contact
   content/site.ts all copy and links
 ```
 

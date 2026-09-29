@@ -1,15 +1,16 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import clsx from "clsx";
 import { site } from "@/content/site";
 import { container } from "./ui";
 
 const links = [
-  { href: "#work", label: "Work" },
-  { href: "#experience", label: "Experience" },
-  { href: "#approach", label: "Approach" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#projects", label: "Projects" },
+  { href: "/#experience", label: "Experience" },
+  { href: "/#about", label: "About" },
+  { href: "/#contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -18,10 +19,10 @@ export function Nav() {
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-butter/90 backdrop-blur">
       <div className={clsx(container, "flex h-[72px] items-center justify-between md:h-[84px]")}>
-        <a href="#top" className="font-serif text-[26px] text-ink md:text-[28px]">
+        <Link href="/" className="font-serif text-[26px] text-ink md:text-[28px]">
           {site.name}
           <span className="text-burgundy">.</span>
-        </a>
+        </Link>
 
         <nav aria-label="Primary" className="hidden items-center gap-10 text-[15px] md:flex">
           {links.map((l) => (
