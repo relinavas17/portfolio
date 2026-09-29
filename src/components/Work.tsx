@@ -104,6 +104,11 @@ export function Work() {
                         Read the case study →
                       </a>
                     )}
+                    {p.demo && (
+                      <a href={p.demo} target="_blank" rel="noreferrer" className="text-burgundy hover:text-burgundy-deep">
+                        Try it live ↗
+                      </a>
+                    )}
                     {p.github && (
                       <a href={p.github} target="_blank" rel="noreferrer" className="text-olive hover:text-olive-deep">
                         View on GitHub ↗

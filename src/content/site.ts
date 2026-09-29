@@ -36,6 +36,7 @@ export type Project = {
   summary: string;
   detail: { label: string; body: string }[];
   github?: string;
+  demo?: string; // live demo link, shown as "Try it live"
   caseStudy?: string; // add a URL once a case study page exists
 };
 
@@ -61,7 +62,7 @@ export const projects: Project[] = [
       },
       { label: "What I'd change", body: "[Your answer]" },
     ],
-    github: "https://github.com/relinavas17", // TODO: point to the Mira repo if it has one
+    demo: "", // TODO: paste the Retell AI link for Mira
   },
   {
     id: "evaluator",
