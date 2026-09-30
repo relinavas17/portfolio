@@ -10,7 +10,6 @@ export const site = {
     email: "mailto:[your-email]", // TODO: replace with your email
     linkedin: "#", // TODO: replace with your LinkedIn URL
     github: "https://github.com/relinavas17",
-    resume: "/resume.pdf", // TODO: drop resume.pdf into /public
   },
 };
 
@@ -23,7 +22,7 @@ export const hero = {
     "explain why agents fail.",
     "ship to 150K+ users.",
   ],
-  sub: "Product manager with an engineer's background. Four years across product, software engineering, and analytics, taking ambiguous problems to shipped, measured products.",
+  sub: "Frontend engineer turned product manager, with a detour through data. I still prototype before I write the spec.",
   stats: [
     { value: "150K+", label: "users on cross-platform mobile apps I shipped as a frontend engineer" },
     { value: "0→1", label: "SaaS platform scoped from ICP to MVP to launch plan" },
@@ -50,7 +49,7 @@ export const projects: Project[] = [
   {
     slug: "mira",
     name: "Mira",
-    oneLiner: "A voice agent that files auto insurance claims over the phone.",
+    oneLiner: "Filing a car insurance claim still means hold music. Mira answers the call, verifies the driver, and files the claim in about a minute and a half.",
     highlight: "100% intent accuracy",
     title: "Mira, a voice agent that files auto insurance claims",
     meta: "Independent build · 2026",
@@ -78,7 +77,7 @@ export const projects: Project[] = [
   {
     slug: "llm-evaluator",
     name: "Claims LLM evaluator",
-    oneLiner: "Six models, six weighted dimensions, one production pick.",
+    oneLiner: "Before choosing a model for a live claims screen, I put six of them through the same calls and let the scores decide.",
     highlight: "Claude Sonnet 4 recommended",
     title: "Choosing a production model for claims intake, with evidence",
     meta: "Independent build · 2026",
@@ -106,7 +105,7 @@ export const projects: Project[] = [
   {
     slug: "agent-observability",
     name: "Agent failure analysis",
-    oneLiner: "Sorts failed calls into knowledge, instruction, or execution gaps.",
+    oneLiner: "Knowing an agent failed is the easy part. This pipeline labels each failed call by why it failed, so the fix lands with the right owner.",
     highlight: "LLM-as-judge on ELT",
     title: "Finding out why AI agents fail on real calls",
     meta: "Independent build · 2026",
@@ -131,7 +130,7 @@ export const projects: Project[] = [
   {
     slug: "usda-dashboards",
     name: "USDA market dashboards",
-    oneLiner: "15+ Power BI dashboards for a USDA-funded national web portal.",
+    oneLiner: "USDA market data, rebuilt as 15+ Power BI dashboards and a chatbot that answers questions in plain English.",
     highlight: "50+ external stakeholders",
     title: "Turning USDA market data into dashboards 50+ stakeholders rely on",
     meta: "Dynamic Sustainability Lab, Syracuse University · 2024 to 2025",
@@ -162,6 +161,8 @@ export type Role = {
   role: string;
   dates: string;
   track: "Product" | "Analytics" | "Engineering";
+  impact: { value: string; label: string }; // headline number for the detail panel
+  current?: boolean;
   summary: string;
   points: string[];
 };
@@ -174,6 +175,8 @@ export const experience: Role[] = [
     role: "Product Manager",
     dates: "Jun 2026 to present",
     track: "Product",
+    current: true,
+    impact: { value: "0→1", label: "SaaS platform, from discovery to MVP roadmap" },
     summary: "Leading discovery and scoping for a 0→1 AI-powered workforce management SaaS platform.",
     points: [
       "Defining the core feature set with engineering, design, and client teams to set the MVP roadmap",
@@ -185,6 +188,7 @@ export const experience: Role[] = [
     role: "Product Manager",
     dates: "Jun 2025 to Apr 2026",
     track: "Product",
+    impact: { value: "3x", label: "weekly active users after an onboarding fix" },
     summary: "Owned 0→1 MVP delivery end to end at a Goldman Sachs spinoff ($5M seed).",
     points: [
       "Found onboarding drop-off through user interviews and funnel analysis; shipped a fix that drove a 3x increase in weekly active users",
@@ -197,6 +201,7 @@ export const experience: Role[] = [
     role: "Data Analyst",
     dates: "Jun 2024 to May 2025",
     track: "Analytics",
+    impact: { value: "50+", label: "external stakeholders using the dashboards" },
     summary: "Data and dashboards for a USDA-funded initiative at Syracuse University.",
     points: [
       "Owned design and delivery of 15+ Power BI dashboards for a GIS-based National Web Portal serving 50+ external stakeholders",
@@ -208,6 +213,7 @@ export const experience: Role[] = [
     role: "Software Engineer",
     dates: "Aug 2021 to Jul 2023",
     track: "Engineering",
+    impact: { value: "150K+", label: "users on apps I helped ship" },
     summary: "Built and launched cross-platform mobile applications in Bangalore.",
     points: [
       "Scaled engagement to 150K+ users, aligning technical requirements with business goals",
@@ -229,3 +235,12 @@ export const about = {
     { label: "Toolkit", value: "React, SQL, NLP/NER, API integration, Jira, Figma, Power BI" },
   ],
 };
+
+// Shown between About and Contact only when a real quote is filled in.
+export const testimonial = {
+  quote: "", // TODO: paste a real quote from a manager or collaborator
+  name: "",
+  context: "", // e.g. "Head of Product, Louisa AI · managed Relina directly"
+};
+
+export const availability = "Open to product and technical program roles";

@@ -38,12 +38,6 @@ export function Nav() {
           >
             GitHub ↗
           </a>
-          <a
-            href={site.links.resume}
-            className="rounded-full bg-burgundy px-5 py-[11px] font-medium text-butter transition-transform hover:-translate-y-0.5"
-          >
-            Résumé
-          </a>
         </nav>
 
         <button
@@ -77,14 +71,8 @@ export function Nav() {
                 {l.label}
               </a>
             ))}
-            <a href={site.links.github} target="_blank" rel="noreferrer" className="border-b border-line py-4 text-lg text-ink">
+            <a href={site.links.github} target="_blank" rel="noreferrer" className="py-4 text-lg text-ink">
               GitHub ↗
-            </a>
-            <a
-              href={site.links.resume}
-              className="mt-4 rounded-full bg-burgundy px-5 py-3 text-center font-medium text-butter"
-            >
-              Résumé
             </a>
           </div>
         </nav>

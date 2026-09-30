@@ -1,12 +1,13 @@
 import clsx from "clsx";
 import { about } from "@/content/site";
 import { Copy, container } from "./ui";
+import { Reveal } from "./Reveal";
 
 export function About() {
   return (
     <section id="about" className="scroll-mt-20 bg-olive-deep text-butter">
       <div className={clsx(container, "grid grid-cols-1 gap-12 py-20 md:py-26 lg:grid-cols-[minmax(0,1fr)_380px] lg:gap-20")}>
-        <div className="flex flex-col gap-8">
+        <Reveal className="flex flex-col gap-8">
           <div className="font-mono text-[13px] uppercase tracking-[0.08em] text-sage">About</div>
           <h2 className="font-serif text-[52px] leading-[1.02] md:text-[76px]">
             Hi, I&apos;m <em className="text-gold">Relina.</em>
@@ -24,7 +25,7 @@ export function About() {
               </p>
             ))}
           </div>
-        </div>
+        </Reveal>
 
         <dl className="flex flex-col self-end rounded-2xl bg-olive-panel p-7">
           {about.facts.map((f, i) => (

@@ -28,8 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
+      suppressHydrationWarning
       className={`${GeistSans.variable} ${GeistMono.variable} ${instrument.variable} antialiased`}
     >
+      <head>
+        {/* Marks JS as available so scroll-in animations only hide content when they can reveal it */}
+        <script dangerouslySetInnerHTML={{ __html: "document.documentElement.classList.add('js')" }} />
+      </head>
       <body className="min-h-screen">{children}</body>
     </html>
   );

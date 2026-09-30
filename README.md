@@ -18,11 +18,10 @@ All copy lives in `src/content/site.ts`. Any string wrapped in `[brackets]` is a
 Still to fill in:
 
 - Email and LinkedIn URLs (`site.links`)
-- `public/resume.pdf`
-- Experience dates, SuperWorld role, one-line outcomes, school name
+- School name, and the "outside work" line in About
 - "What I'd change" for each project, observability result
 - Mira's Retell AI demo link (`demo` on the Mira project)
-- Experience outcomes per role, and the "outside work" line in About
+- A testimonial (`testimonial` in site.ts); the section stays hidden until the quote is filled in
 
 ## Structure
 
@@ -30,7 +29,7 @@ Still to fill in:
 src/
   app/            layout, global styles, fonts
   app/projects/[slug]/  one detail page per project
-  components/     Nav, Hero (typed headline), Projects (cards), Experience (timeline + detail panel), About, Contact
+  components/     Nav, Hero (typed headline), Projects (cards), Experience (timeline + detail panel), About, Testimonial, Contact, Reveal (scroll-in motion)
   content/site.ts all copy and links
 ```
 
