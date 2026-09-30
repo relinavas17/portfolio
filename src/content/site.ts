@@ -7,8 +7,8 @@ export const site = {
   description:
     "Product manager with a software engineering background. 0→1 SaaS, AI agents, and the data that shows whether they work.",
   links: {
-    email: "mailto:[your-email]", // TODO: replace with your email
-    linkedin: "#", // TODO: replace with your LinkedIn URL
+    email: "mailto:relinavasx@gmail.com",
+    linkedin: "https://www.linkedin.com/in/relinavas/",
     github: "https://github.com/relinavas17",
   },
 };
@@ -22,7 +22,7 @@ export const hero = {
     "explain why agents fail.",
     "ship to 150K+ users.",
   ],
-  sub: "Frontend engineer turned product manager, with a detour through data. I still prototype before I write the spec.",
+  sub: "Product Manager with a background in Software Engineering and Analytics. I build what I spec, and measure what I ship.",
   stats: [
     { value: "150K+", label: "users on cross-platform mobile apps I shipped as a frontend engineer" },
     { value: "0→1", label: "SaaS platform scoped from ICP to MVP to launch plan" },
@@ -69,7 +69,6 @@ export const projects: Project[] = [
         label: "How I knew it worked",
         body: "Across 10 test calls: 100% intent accuracy, 100% of claims filed, ~1.7 s average latency, and 1 m 34 s average handle time.",
       },
-      { label: "What I'd change", body: "[Your answer]" },
     ],
     stack: ["Retell AI", "GPT-4.1 mini", "ElevenLabs", "Supabase", "Val.town", "Mapbox"],
     demo: "", // TODO: paste the Retell AI link for Mira
@@ -97,7 +96,6 @@ export const projects: Project[] = [
         label: "How I knew it worked",
         body: "Claude Opus 4, Sonnet 4, Haiku 4.5, GPT-4o, GPT-4o-mini, and Llama 3.3 70B were scored on answer relevancy (22%), faithfulness (20%), smoothness (20%), context precision (15%), escalation accuracy (15%), and conciseness (8%). Sonnet 4 came out as the production pick.",
       },
-      { label: "What I'd change", body: "[Your answer]" },
     ],
     stack: ["React", "Claude API", "RAGAS", "Groq", "Excel + Word reporting"],
     github: "https://github.com/relinavas17/llm-evaluator",
@@ -122,7 +120,6 @@ export const projects: Project[] = [
         body: "Simulated contact center transcripts, an LLM-as-judge classifier that labels each failure as a knowledge, instruction, or execution gap, and an idempotent ELT pipeline modeled on production data platforms. I chose an LLM judge over manual review so it scales with call volume.",
       },
       { label: "How I knew it worked", body: "[Result, e.g. judge agreement with manual labels]" },
-      { label: "What I'd change", body: "[Your answer]" },
     ],
     stack: ["Python", "LLM-as-judge", "ELT", "SQL"],
     github: "https://github.com/relinavas17/agent-observability",
@@ -150,75 +147,73 @@ export const projects: Project[] = [
         label: "How I knew it worked",
         body: "The dashboards serve 50+ external stakeholders through the National Web Portal. Requirements and progress were reviewed with faculty and researchers in regular check-ins. [Add a usage or feedback signal if you have one]",
       },
-      { label: "What I'd change", body: "[Your answer]" },
     ],
     stack: ["Power BI", "SQL", "Excel", "RAG", "GIS"],
   },
 ];
 
-export type Role = {
-  company: string;
-  role: string;
+export type Milestone = {
+  kind: "Work" | "Education";
+  org: string;
+  title: string;
   dates: string;
-  track: "Product" | "Analytics" | "Engineering";
-  impact: { value: string; label: string }; // headline number for the detail panel
+  year: string; // big label on the timeline
+  line: string; // one-liner
   current?: boolean;
-  summary: string;
-  points: string[];
 };
 
 export const experienceHeading = { lead: "From shipping code to", emphasis: "shipping products." };
 
-export const experience: Role[] = [
+// Oldest first: bachelor's degree up to now.
+export const timeline: Milestone[] = [
   {
-    company: "Phoenix Tech Solutions",
-    role: "Product Manager",
-    dates: "Jun 2026 to present",
-    track: "Product",
-    current: true,
-    impact: { value: "0→1", label: "SaaS platform, from discovery to MVP roadmap" },
-    summary: "Leading discovery and scoping for a 0→1 AI-powered workforce management SaaS platform.",
-    points: [
-      "Defining the core feature set with engineering, design, and client teams to set the MVP roadmap",
-      "Scoped the MVP around one wedge, utilization and allocation visibility for agencies of 20 to 200 people",
-    ],
+    kind: "Education",
+    org: "NMAM Institute of Technology",
+    title: "BE, Information Science Engineering",
+    dates: "Graduated Aug 2021",
+    year: "2021",
+    line: "Studied information science and engineering in Nitte, India.",
   },
   {
-    company: "Louisa AI",
-    role: "Product Manager",
-    dates: "Jun 2025 to Apr 2026",
-    track: "Product",
-    impact: { value: "3x", label: "weekly active users after an onboarding fix" },
-    summary: "Owned 0→1 MVP delivery end to end at a Goldman Sachs spinoff ($5M seed).",
-    points: [
-      "Found onboarding drop-off through user interviews and funnel analysis; shipped a fix that drove a 3x increase in weekly active users",
-      "Built a self-serve analytics workflow with n8n and Amplitude APIs, cutting manual reporting time by 60%",
-      "Resolved a conflicting client request with a configuration-based solution instead of custom logic, keeping the platform standard",
-    ],
-  },
-  {
-    company: "Dynamic Sustainability Lab",
-    role: "Data Analyst",
-    dates: "Jun 2024 to May 2025",
-    track: "Analytics",
-    impact: { value: "50+", label: "external stakeholders using the dashboards" },
-    summary: "Data and dashboards for a USDA-funded initiative at Syracuse University.",
-    points: [
-      "Owned design and delivery of 15+ Power BI dashboards for a GIS-based National Web Portal serving 50+ external stakeholders",
-      "Designed a RAG chatbot that turns SQL queries into natural language for self-serve insights",
-    ],
-  },
-  {
-    company: "SpurTree Technologies",
-    role: "Software Engineer",
+    kind: "Work",
+    org: "SpurTree Technologies",
+    title: "Software Engineer",
     dates: "Aug 2021 to Jul 2023",
-    track: "Engineering",
-    impact: { value: "150K+", label: "users on apps I helped ship" },
-    summary: "Built and launched cross-platform mobile applications in Bangalore.",
-    points: [
-      "Scaled engagement to 150K+ users, aligning technical requirements with business goals",
-      "Resolved 500+ production issues, cutting repeat incidents by 40%",
-    ],
+    year: "2021",
+    line: "Shipped cross-platform mobile apps to 150K+ users and resolved 500+ production issues.",
+  },
+  {
+    kind: "Work",
+    org: "Dynamic Sustainability Lab",
+    title: "Data Analyst",
+    dates: "Jun 2024 to May 2025",
+    year: "2024",
+    line: "Built 15+ Power BI dashboards and a RAG chatbot for a USDA-funded national portal.",
+  },
+  {
+    kind: "Education",
+    org: "Syracuse University",
+    title: "MS, Engineering Management",
+    dates: "Graduated May 2025",
+    year: "2025",
+    line: "A master's that pairs engineering depth with the business side of building products.",
+  },
+  {
+    kind: "Work",
+    org: "Louisa AI",
+    title: "Product Manager",
+    dates: "Jun 2025 to Apr 2026",
+    year: "2025",
+    line: "Owned 0→1 MVP delivery at a Goldman Sachs spinoff and grew weekly active users 3x.",
+  },
+  {
+    kind: "Work",
+    org: "Phoenix Tech Solutions",
+    title: "Product Manager",
+    dates: "Jun 2026 to present",
+    year: "Now",
+    line: "Leading discovery and MVP scoping for a 0→1 AI-powered workforce management platform.",
+    current: true,
   },
 ];
 
@@ -230,7 +225,6 @@ export const about = {
     "[A line about you outside work]",
   ],
   facts: [
-    { label: "Education", value: "M.S. Engineering Management · [School]" },
     { label: "Looking for", value: "Product and technical program roles" },
     { label: "Toolkit", value: "React, SQL, NLP/NER, API integration, Jira, Figma, Power BI" },
   ],

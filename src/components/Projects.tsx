@@ -22,16 +22,7 @@ export function Projects() {
                 href={`/projects/${p.slug}`}
                 className="group flex h-full flex-col gap-6 rounded-2xl border border-line bg-butter p-7 transition-all duration-300 hover:-translate-y-1.5 hover:border-burgundy hover:shadow-[0_18px_40px_-24px_rgba(122,31,43,0.45)]"
               >
-                <div className="flex items-center justify-between font-mono text-[13px] text-muted">
-                  <span className="text-ink">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="flex gap-1.5">
-                    {p.tags.map((t) => (
-                      <span key={t} className="rounded-md bg-olive-tag px-2 py-0.5 text-[12px] text-olive-tag-ink">
-                        {t}
-                      </span>
-                    ))}
-                  </span>
-                </div>
+                <span className="font-mono text-[13px] text-ink">{String(i + 1).padStart(2, "0")}</span>
 
                 <div className="flex flex-1 flex-col gap-3">
                   <h3 className="font-serif text-[32px] leading-[1.05] transition-colors group-hover:text-burgundy">
