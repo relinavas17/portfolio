@@ -12,10 +12,10 @@ export function Experience() {
 
   return (
     <section id="experience" className="scroll-mt-20 border-t border-line">
-      <div className={clsx(container, "flex flex-col gap-14 py-20 md:py-26")}>
+      <div className={clsx(container, "flex flex-col gap-8 py-16 md:py-12")}>
         <Reveal className="flex flex-col gap-3.5">
           <Eyebrow>Experience &amp; Education</Eyebrow>
-          <h2 className="max-w-[900px] font-serif text-[44px] leading-[1.05] md:text-[60px]">
+          <h2 className="max-w-[900px] font-serif text-[40px] leading-[1.05] md:text-[52px]">
             {experienceHeading.lead} <em className="text-burgundy">{experienceHeading.emphasis}</em>
           </h2>
         </Reveal>
@@ -46,12 +46,12 @@ export function Experience() {
                   onClick={() => setOpen(i)}
                   onMouseEnter={() => setOpen(i)}
                   onFocus={() => setOpen(i)}
-                  className="group flex w-full items-baseline justify-between gap-6 py-6 text-left md:py-8"
+                  className="group flex w-full items-baseline justify-between gap-6 py-3 text-left"
                 >
                   <span
                     className={clsx(
-                      "font-serif text-[clamp(30px,4.4vw,64px)] leading-[1.02] tracking-[-0.01em] transition-[transform,color] duration-300",
-                      isOpen ? "translate-x-0 text-ink md:translate-x-3" : "text-ink",
+                      "font-serif text-[clamp(24px,2.7vw,38px)] leading-[1.1] tracking-[-0.01em] transition-[transform,color] duration-300",
+                      isOpen ? "translate-x-0 text-ink md:translate-x-2" : "text-ink",
                     )}
                   >
                     {m.heading}
@@ -74,8 +74,8 @@ export function Experience() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    <div className="flex flex-col gap-3 pb-8 md:pl-3">
-                      <span className="flex flex-wrap items-center gap-3 font-mono text-[12px] uppercase tracking-[0.06em]">
+                    <div className="flex flex-col gap-2 pb-4 md:flex-row md:items-baseline md:gap-6 md:pl-2">
+                      <span className="flex shrink-0 flex-wrap items-center gap-3 font-mono text-[12px] uppercase tracking-[0.06em]">
                         <span
                           className={clsx(
                             "rounded-md px-2 py-0.5",
@@ -88,7 +88,7 @@ export function Experience() {
                           {edu ? `${m.title} · ${m.dates}` : m.dates}
                         </span>
                       </span>
-                      <p className="max-w-[760px] text-[17px] leading-relaxed text-ink-soft md:text-[19px]">
+                      <p className="max-w-[760px] text-[16px] leading-relaxed text-ink-soft md:text-[17px]">
                         {m.line}
                       </p>
                     </div>
