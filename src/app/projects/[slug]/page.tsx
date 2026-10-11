@@ -83,7 +83,7 @@ export default async function ProjectPage({ params }: PageProps<"/projects/[slug
 
           <div className="grid grid-cols-1 gap-12 border-t-[1.5px] border-ink pt-12 lg:grid-cols-[minmax(0,1fr)_300px] lg:gap-20">
             <div className="flex flex-col">
-              {p.sections.map((s, n) => (
+              {p.sections.filter((s) => !/^\[.*\]$/.test(s.body.trim())).map((s, n) => (
                 <section
                   key={s.label}
                   className={clsx("grid grid-cols-1 gap-3 py-8 md:grid-cols-[200px_minmax(0,1fr)] md:gap-10", n > 0 && "border-t border-line")}
