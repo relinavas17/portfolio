@@ -21,7 +21,6 @@ export function Experience() {
     const el = scroller.current;
     if (el && el.scrollWidth > el.clientWidth) el.scrollLeft = el.scrollWidth;
   }, []);
-  const edu = m.kind === "Education";
 
   // Line runs from the centre of the first column to the centre of the last.
   const inset = `${50 / n}%`;
@@ -41,11 +40,11 @@ export function Experience() {
           {/* Scrolls sideways on narrow screens */}
           <div ref={scroller} className="-mx-6 overflow-x-auto px-6 pb-2 md:mx-0 md:px-0">
             <ol className="relative grid min-w-[900px] grid-cols-6">
-              {/* Base line and burgundy progress up to the selected stop */}
+              {/* Base line and glowing olive progress up to the selected stop */}
               <span aria-hidden="true" className="absolute top-[68px] h-px bg-line" style={{ left: inset, right: inset }} />
               <span
                 aria-hidden="true"
-                className="absolute top-[67px] h-[3px] rounded-full bg-burgundy transition-[width] duration-500 ease-out"
+                className="absolute top-[67px] h-[3px] rounded-full bg-olive shadow-[0_0_10px_2px_rgba(75,90,36,0.45)] transition-[width] duration-500 ease-out"
                 style={{ left: inset, width: `calc((100% - 2 * ${inset}) * ${fill})` }}
               />
 
@@ -82,9 +81,9 @@ export function Experience() {
                             "relative z-10 border-2 transition-all duration-300",
                             isEdu ? "rotate-45 rounded-[4px]" : "rounded-full",
                             on
-                              ? "h-[22px] w-[22px] border-burgundy bg-burgundy shadow-[0_0_0_6px_rgba(122,31,43,0.12)]"
+                              ? "h-[22px] w-[22px] border-olive bg-olive shadow-[0_0_0_6px_rgba(75,90,36,0.14),0_0_14px_2px_rgba(75,90,36,0.45)]"
                               : "h-[16px] w-[16px]",
-                            !on && (passed ? "border-burgundy bg-butter" : "border-olive bg-butter group-hover:border-burgundy"),
+                            !on && (passed ? "border-olive bg-butter" : "border-[#a3a77c] bg-butter group-hover:border-olive"),
                           )}
                         />
                       </span>
@@ -117,14 +116,6 @@ export function Experience() {
             className="flex animate-[fadeUp_.35s_ease-out] flex-col gap-3 rounded-2xl bg-card px-6 py-6 md:flex-row md:items-center md:gap-8 md:px-8"
           >
             <span className="flex shrink-0 flex-wrap items-center gap-3 font-mono text-[12px] uppercase tracking-[0.06em]">
-              <span
-                className={clsx(
-                  "rounded-md px-2 py-0.5",
-                  edu ? "bg-[#f1dfe0] text-burgundy" : "bg-olive-tag text-olive-tag-ink",
-                )}
-              >
-                {m.kind}
-              </span>
               <span className="normal-case tracking-normal text-muted">
                 {m.title} · {m.dates}
               </span>
