@@ -222,7 +222,6 @@ export const about = {
   paragraphs: [
     "I started as a frontend engineer, shipping cross-platform mobile apps to more than 150,000 users. Today I work as a product manager, but I never stopped building: when I want to understand a problem, I usually prototype it.",
     "Lately that has meant AI agents. Building them, evaluating them, and working out why they fail. I like the part of product work where a vague idea turns into something you can measure.",
-    "[A line about you outside work]",
   ],
   facts: [
     { label: "Looking for", value: "Product and technical program roles" },

@@ -17,7 +17,6 @@ All copy lives in `src/content/site.ts`. Any string wrapped in `[brackets]` is a
 
 Still to fill in:
 
-- The "outside work" line in About
 - Observability pipeline result
 - Mira's Retell AI demo link (`demo` on the Mira project)
 - A testimonial (`testimonial` in site.ts); the section stays hidden until the quote is filled in
