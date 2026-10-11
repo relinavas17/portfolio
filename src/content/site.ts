@@ -156,6 +156,7 @@ export type Milestone = {
   kind: "Work" | "Education";
   org: string;
   title: string;
+  heading: string; // short label shown in large type
   dates: string;
   year: string; // big label on the timeline
   line: string; // one-liner
@@ -169,6 +170,7 @@ export const timeline: Milestone[] = [
   {
     kind: "Education",
     org: "NMAM Institute of Technology",
+    heading: "Bachelor's",
     title: "BE, Information Science Engineering",
     dates: "Graduated Aug 2021",
     year: "2021",
@@ -177,6 +179,7 @@ export const timeline: Milestone[] = [
   {
     kind: "Work",
     org: "SpurTree Technologies",
+    heading: "Software Engineer",
     title: "Software Engineer",
     dates: "Aug 2021 to Jul 2023",
     year: "2021",
@@ -185,6 +188,7 @@ export const timeline: Milestone[] = [
   {
     kind: "Work",
     org: "Dynamic Sustainability Lab",
+    heading: "Data Analyst",
     title: "Data Analyst",
     dates: "Jun 2024 to May 2025",
     year: "2024",
@@ -193,6 +197,7 @@ export const timeline: Milestone[] = [
   {
     kind: "Education",
     org: "Syracuse University",
+    heading: "Master's",
     title: "MS, Engineering Management",
     dates: "Graduated May 2025",
     year: "2025",
@@ -201,6 +206,7 @@ export const timeline: Milestone[] = [
   {
     kind: "Work",
     org: "Louisa AI",
+    heading: "Product Manager",
     title: "Product Manager",
     dates: "Jun 2025 to Apr 2026",
     year: "2025",
@@ -209,6 +215,7 @@ export const timeline: Milestone[] = [
   {
     kind: "Work",
     org: "Phoenix Tech Solutions",
+    heading: "Product Manager",
     title: "Product Manager",
     dates: "Jun 2026 to present",
     year: "Now",
